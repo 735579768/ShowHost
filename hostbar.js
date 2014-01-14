@@ -70,7 +70,19 @@ document.body.appendChild(newDiv);
 newDiv.className="chrome-hosts-manager-ipaddr2";
 
 newDiv.onclick=function(){
-this.style.display="none";
+var a=this.style.width;
+if(a==="50px")
+{
+	this.style.width="auto";
+	this.style.overflow="auto";
+	this.title="当前标签页IP->物理地址（点击隐藏）";
+}else
+{
+	this.style.width="50px";
+	this.style.overflow="hidden";
+	this.title="当前标签页IP->物理地址（点击显示）";
+}
+//this.style.display="none";
 }
 }
 /////////////////////////////////////////////////////////////////////查询pr值
