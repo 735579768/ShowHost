@@ -29,7 +29,7 @@ simpleAjax.sendAjax("http://www.baidu.com/s","wd="+window.location.href,"GET",fu
  var src = data;
  var showstr="";
  //var re = "/f13"+window.location.host+([\s\S]*?)(\d+)\-(\d+)\-(\d+)([\s\S]*?)百度快照/g; 
- var re=/class=\"f13\"([\s\S]*?)<b>([^<]{4,100})<\/b>([\s\S]*?)[^\d+](\d{4})\-(\d+)\-(\d+)([\s\S]*?)百度快照/g;              // 创建正则表达式模式。    var arr;
+ var re=/class=\"f13\"([\s\S]*?)<b>([^<]{4,100})<\/b>([\s\S]*?)[^\d+];(2\d{3})\-(\d+)\-(\d+)([\s\S]*?)百度快照/g;              // 创建正则表达式模式。    var arr;
  var arr = re.exec(src);
  var temstr="";
  if(arr!=null)
